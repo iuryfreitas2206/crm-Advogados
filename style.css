@@ -5,6 +5,22 @@ body {
     background: #f4f6f9;
 }
 
+/* BOTÃO MENU (NOVO) */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    font-size: 20px;
+    border-radius: 6px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
 /* SIDEBAR */
 .sidebar {
     width: 250px;
@@ -12,6 +28,7 @@ body {
     color: white;
     height: 100vh;
     padding: 20px;
+    transition: 0.3s; /* NOVO */
 }
 
 .sidebar h2 {
@@ -261,4 +278,58 @@ td {
 .item {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVIDADE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    /* BOTÃO APARECE */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* SIDEBAR vira menu escondido */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 220px;
+        height: 100%;
+        z-index: 999;
+    }
+
+    /* ABRIR MENU */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* CONTEÚDO */
+    .content {
+        padding: 15px;
+        margin-top: 60px;
+    }
+
+    /* DASHBOARD */
+    .dashboard {
+        flex-direction: column;
+    }
+
+    /* FORM */
+    .form-group {
+        flex-direction: column;
+    }
+
+    /* TABELA */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
