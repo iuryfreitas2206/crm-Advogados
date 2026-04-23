@@ -9,19 +9,20 @@
 
 <body>
 
-<!-- BOTÃO MENU MOBILE -->
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-<!-- SIDEBAR -->
+<!-- SIDEBAR / NAV -->
 <div class="sidebar">
-    <h2>
-        <a href="index.html">⚖️ CRM Jurídico</a>
-    </h2>
 
-    <a href="dashboard.html">Dashboard</a>
-    <a href="clientes.html">Clientes</a>
-    <a href="processos.html">Processos</a>
-    <a href="prazos.html">Prazos</a>
+    <div class="logo">
+        <a href="index.html">⚖️ CRM Jurídico</a>
+    </div>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="processos.html">Processos</a>
+        <a href="prazos.html">Prazos</a>
+    </div>
+
 </div>
 
 <!-- CONTEÚDO -->
@@ -62,13 +63,6 @@
 </div>
 
 </div>
-
-<!-- SCRIPT MENU -->
-<script>
-function toggleMenu() {
-    document.querySelector('.sidebar').classList.toggle('active');
-}
-</script>
 
 </body>
 </html>
